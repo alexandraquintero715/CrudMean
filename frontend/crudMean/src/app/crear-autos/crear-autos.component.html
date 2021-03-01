@@ -1,0 +1,77 @@
+
+<div class="container">
+  <h1>Registrar Autos</h1>
+
+
+  <form (ngSubmit)="registrar()" ngNativeValidate>
+    <div class="form-row">
+      <div class="form-group col-5">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Marca</span>
+          <input
+          [(ngModel)]='nuevoAuto.marca'
+          [ngModelOptions]="{standalone: true}"
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-group col-5">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Modelo</span>
+          <input
+          [(ngModel)]='nuevoAuto.modelo'
+          [ngModelOptions]="{standalone: true}"
+            type="number"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            required
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-5">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Color</span>
+          <input
+          [(ngModel)]='nuevoAuto.color'
+          [ngModelOptions]="{standalone: true}"
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-group col-5">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Precio</span>
+          <input
+          [(ngModel)]='nuevoAuto.precio'
+          [ngModelOptions]="{standalone: true}"
+            type="number"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            required
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Guardar</button>
+
+      <a routerLink="/users" class="btn btn-link">Cancelar</a>
+    </div>
+  </form>
+</div>
